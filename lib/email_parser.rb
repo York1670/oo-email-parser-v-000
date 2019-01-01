@@ -7,7 +7,7 @@ class EmailParser
 
   def parse
     email_list = @emails.split(/[\s,]/)
-    return email_list.uniq
+    return email_list.uniq.reject{|x| x.empty?}
   end
 
 end
